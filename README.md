@@ -4,6 +4,32 @@ This [GitHub Action][github actions]
 publishes the contents of a directory to your project's [wiki][github wiki]
 from a workflow.
 
+## Usage
+
+In a new or existing workflow,
+add a step using `SwiftDocOrg/github-wiki-publish-action@v1`
+with a path to a directory containing the documentation you wish to upload.
+
+```yml
+name: Documentation
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      # Additional steps to generate documentation in "Documentation" directory
+      - name: Upload Documentation to Wiki
+        uses: SwiftDocOrg/github-wiki-publish-action@v1
+        with:
+          path: "Documentation"
+        env:
+          GITHUB_PERSONAL_ACCESS_TOKEN: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
+```
+
 ## Setup
 
 This GitHub action requires that your repository has the following:
