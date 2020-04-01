@@ -27,7 +27,7 @@ jobs:
         with:
           path: "Documentation"
         env:
-          GITHUB_PERSONAL_ACCESS_TOKEN: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
+          GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
 ```
 
 ## Setup
@@ -35,7 +35,7 @@ jobs:
 This GitHub action requires that your repository has the following:
 
 - A wiki with at least one page in it
-- A secret named `GITHUB_PERSONAL_ACCESS_TOKEN`
+- A secret named `GH_PERSONAL_ACCESS_TOKEN`
   with a Github personal access token with "repo" authorization
 
 Follow the steps below to ensure that everything's configured correctly.
@@ -92,7 +92,7 @@ and navigate to your project settings.
 Navigate to the "Secrets" page,
 click "Add a new secret",
 and fill in the form by 
-entering `GITHUB_PERSONAL_ACCESS_TOKEN` into the "Name" field and 
+entering `GH_PERSONAL_ACCESS_TOKEN` into the "Name" field and 
 pasting your token into the "Value" field.
 
 ## License
