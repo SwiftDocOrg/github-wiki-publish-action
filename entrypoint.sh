@@ -53,7 +53,14 @@ tmp_dir=$(mktemp -d -t ci-XXXXXXXXXX)
 debug "Enumerating contents of $1"
 for file in $(find $1 -maxdepth 1 -type f -name '*.md' -execdir basename '{}' ';'); do
     debug "Copying $file"
-    cp "$1/$file" "$tmp_dir"
+    wiki_name=$(grep '<!-- wiki-title' $1/$file | sed 's/<!-- wiki-title //g' | sed 's/-->//g' | sed 's/ *$//g' | sed 's/\ /-/g')
+    if [ -z "$wiki_name" ]
+    then
+        cp "$1/$file" "$tmp_dir"
+    else
+        debug "Renaming $file to $wiki_name.md"
+        cp "$1/$file" "$tmp_dir"/"$wiki_name.md"
+    fi
 done
 
 debug "Committing and pushing changes"
