@@ -63,7 +63,7 @@ create the first wiki page.
 
 ### 3. Generate a Personal Access Token
 
-Navigate to the [Personal access tokens](https://github.com/settings/tokens) page 
+Navigate to the [Personal access tokens](https://github.com/settings/tokens) page
 in your GitHub account settings
 (Settings > Developer settings > Personal access tokens)
 and click the "Generate a new token" button.
@@ -78,11 +78,11 @@ click the "Generate token" button at the bottom of the form.
 
 ![GitHub Personal Access Token Select Scopes](https://user-images.githubusercontent.com/7659/72726210-9f9a7d80-3b3c-11ea-81b4-528de92fb9fa.png)
 
-> **Note**: 
+> **Note**:
 > GitHub actions have access to [a `GITHUB_TOKEN` secret][GITHUB_TOKEN],
-> but that token's permissions are limited to 
+> but that token's permissions are limited to
 > the repository that contains your workflow.
-> This workflow requires the generation of a new personal acccess token
+> This workflow requires the generation of a new personal access token
 > to read and write to the git repository for your project's wiki.
 
 ### 4. Set a Repository Secret
@@ -91,8 +91,8 @@ Copy your generated personal access token to the clipboard
 and navigate to your project settings.
 Navigate to the "Secrets" page,
 click "Add a new secret",
-and fill in the form by 
-entering `GH_PERSONAL_ACCESS_TOKEN` into the "Name" field and 
+and fill in the form by
+entering `GH_PERSONAL_ACCESS_TOKEN` into the "Name" field and
 pasting your token into the "Value" field.
 
 ## License
