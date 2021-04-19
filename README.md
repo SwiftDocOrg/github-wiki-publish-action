@@ -30,8 +30,6 @@ jobs:
           GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
 ```
 
-This workflow supports GitHub Enterprise automatically using the `GITHUB_SERVER_URL` envar.
-
 ## Setup
 
 This GitHub action requires that your repository has the following:
