@@ -30,6 +30,13 @@ jobs:
           GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
 ```
 
+### Supported Products
+
+- [x] GitHub.com
+- [x] GitHub Enterprise Cloud
+- [x] GitHub Enterprise Server 
+- [x] GitHub AE
+
 ## Setup
 
 This GitHub action requires that your repository has the following:
